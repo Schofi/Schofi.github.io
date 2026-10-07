@@ -1,9 +1,9 @@
 baseURL: https://schofi.github.io/
-title: Schofi 的博客
+title: Schofi's Blog
 theme: PaperMod
-locale: zh-CN
-defaultContentLanguage: zh
-hasCJKLanguage: true
+locale: en-US
+defaultContentLanguage: en
+hasCJKLanguage: false
 timeZone: Asia/Shanghai
 enableRobotsTXT: true
 buildDrafts: false
@@ -21,10 +21,10 @@ taxonomies:
 params:
   env: production
   author: xiangxin
-  description: 记录关于 AI Agent、大模型训练与工程实践的学习、实验和思考。
-  keywords: [Schofi, xiangxin, AI Agent, LLM, Agentic RL, 技术博客]
+  description: Notes on AI agents, LLM training, and engineering. Learning through reading, experiments, and practice.
+  keywords: [Schofi, xiangxin, AI agents, LLM, Agentic RL, engineering]
   mainSections: [posts]
-  DateFormat: '2006 年 1 月 2 日'
+  DateFormat: 'January 2, 2006'
   defaultTheme: auto
   disableThemeToggle: false
   ShowReadingTime: true
@@ -48,17 +48,17 @@ params:
   label:
     text: Schofi
   homeInfoParams:
-    Title: '👋 你好，我是 Schofi'
+    Title: "👋 Hi, I'm Schofi"
     Content: |
-      在这里，记录学习、实验与思考。
+      Notes on learning, experiments, and ideas.
 
-      关注 **AI Agent · 大模型训练 · 工程实践**，把遇到的问题和逐渐想明白的事情写下来。
+      Exploring **AI agents · LLM training · engineering**, one question at a time.
   socialIcons:
     - name: github
       title: GitHub
       url: https://github.com/Schofi
     - name: rss
-      title: RSS 订阅
+      title: Subscribe via RSS
       url: /index.xml
   fuseOpts:
     isCaseSensitive: false
@@ -72,23 +72,23 @@ params:
 menu:
   main:
     - identifier: posts
-      name: 文章
+      name: Posts
       url: /posts/
       weight: 10
     - identifier: archives
-      name: 归档
+      name: Archive
       url: /archives/
       weight: 20
     - identifier: search
-      name: 搜索
+      name: Search
       url: /search/
       weight: 30
     - identifier: tags
-      name: 标签
+      name: Tags
       url: /tags/
       weight: 40
     - identifier: about
-      name: 关于
+      name: About
       url: /about/
       weight: 50
 

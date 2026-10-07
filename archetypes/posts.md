@@ -9,10 +9,10 @@ tags: []
 ShowToc: true
 ---
 
-在这里写文章的开头，说明要讨论的问题。
+Start with a brief introduction to the question this post explores.
 
-## 背景
+## Background
 
-## 思考与实践
+## Ideas and Experiments
 
-## 参考资料
+## References

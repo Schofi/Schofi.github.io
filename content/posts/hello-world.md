@@ -1,22 +1,22 @@
 ---
-title: "从这里开始"
+title: "Starting Here"
 date: 2026-10-07T09:00:00+08:00
 draft: false
 author: "xiangxin"
-description: "给思考留一个地方，记录 AI、工程和学习中的问题与发现。"
-summary: "给思考留一个地方。这里将记录我对 AI 的学习、阅读和工程实践，也保留那些还没有想明白的问题。"
-tags: ["随笔"]
+description: "A place for ideas, questions, and discoveries in AI, engineering, and learning."
+summary: "A place to think out loud. I'll share what I learn from studying AI, reading, and building things, along with the questions I'm still working through."
+tags: ["Notes"]
 ShowToc: false
 ---
 
-你好，我是 xiangxin，欢迎来到我的博客。
+Hi, I'm xiangxin. Welcome to my blog.
 
-写下这篇文章，是想给持续的学习留一个地方。读过的论文、做过的实验，以及解决问题时绕过的弯路，如果只留在记忆里，很容易散掉。写下来，就有机会再看一遍，也更容易发现自己还没理解的部分。
+I'm starting this blog to give my ongoing learning a home. Papers I've read, experiments I've run, and detours I've taken while solving problems tend to fade if I leave them in memory. Writing them down gives me a chance to revisit them and notice what I haven't quite understood yet.
 
-接下来，我希望围绕大模型后训练、Agentic RL、智能体基础设施和工业 AI，慢慢积累一些文章。有时是对一个概念的梳理，有时是一次工程实践的记录，也可能只是一个值得继续追问的问题。
+Over time, I hope to build a collection of posts on LLM post-training, Agentic RL, agent infrastructure, and industrial AI. Some will unpack a concept, others will document an engineering project, and some may simply explore a question worth pursuing.
 
-我想尽量把每篇文章写清楚：它在回答什么问题，依据是什么，还有哪些不确定的地方。比起急着得出结论，更希望留下可以复查的思考过程。
+For each post, I want to make the question, the evidence, and the uncertainties clear. I'd rather leave a trail of reasoning I can revisit than rush to a conclusion.
 
-这里从一篇短文开始。以后再慢慢补上。
+For now, it starts with this short note. More to come.
 
 — xiangxin

@@ -1,6 +1,6 @@
-# Schofi 的博客
+# Schofi's Blog
 
-基于 **Hugo 0.167.0 + PaperMod** 的中文个人博客，发布到 <https://schofi.github.io/>。作者为 xiangxin，内容以 AI、工程实践和学习记录为主。
+基于 **Hugo 0.167.0 + PaperMod** 的英文个人博客，发布到 <https://schofi.github.io/>。作者为 xiangxin，内容以 AI、工程实践和学习记录为主。以下维护说明保留中文。
 
 ## 本地预览
 

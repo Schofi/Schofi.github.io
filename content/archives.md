@@ -1,8 +1,8 @@
 ---
-title: "归档"
-description: "按时间浏览全部文章。"
+title: "Archive"
+description: "Browse all posts by date."
 layout: "archives"
 url: "/archives/"
-summary: "按时间浏览全部文章。"
+summary: "Browse all posts by date."
 ShowToc: false
 ---

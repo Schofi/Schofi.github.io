@@ -1,4 +1,4 @@
 ---
-title: "文章"
-description: "关于 AI、工程实践与学习的记录。"
+title: "Posts"
+description: "Notes on AI, engineering, and learning."
 ---
