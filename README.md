@@ -1,119 +1,120 @@
 # Schofi's Blog
 
-基于 **Hugo 0.167.0 + PaperMod** 的英文个人博客，发布到 <https://schofi.github.io/>。作者为 xiangxin，内容以 AI、工程实践和学习记录为主。以下维护说明保留中文。
+An English-language personal blog built with **Hugo 0.167.0 + PaperMod**, published at <https://schofi.github.io/>. Written by xiangxin, it covers AI, engineering, and notes from ongoing learning.
 
-## 本地预览
+## Local preview
 
-主题通过 Git 子模块管理。首次克隆时执行：
+The theme is managed as a Git submodule. To clone the site:
 
 ```powershell
 git clone --recurse-submodules https://github.com/Schofi/Schofi.github.io.git
 cd Schofi.github.io
 ```
 
-如果已经克隆过仓库，在仓库目录执行：
+If you have already cloned the repository, initialize the theme from the repository directory:
 
 ```powershell
 git submodule update --init --recursive
 ```
 
-当前工作区如果已有便携版 Hugo，可以直接启动：
+If the portable Hugo binary is available in your workspace, start the preview with:
 
 ```powershell
 .\.tools\hugo.exe server
 ```
 
-`.tools` 中的本地工具不随仓库分发。在其他电脑上安装 [Hugo 0.167.0](https://github.com/gohugoio/hugo/releases/tag/v0.167.0)，将其加入 `PATH` 后，也可以使用：
+Local tools in `.tools/` are not included in the repository. On another computer, install [Hugo 0.167.0](https://github.com/gohugoio/hugo/releases/tag/v0.167.0), add it to your `PATH`, and run:
 
 ```powershell
 hugo server
 ```
 
-打开终端显示的预览地址，通常是 <http://localhost:1313/>。保持终端运行，修改文章后页面会自动刷新，按 `Ctrl+C` 停止预览。
+Open the preview URL shown in the terminal, usually <http://localhost:1313/>. Keep the terminal running to see changes as you edit. Press `Ctrl+C` to stop the server.
 
-查看草稿时添加 `--buildDrafts`：
+To preview drafts:
 
 ```powershell
 hugo server --buildDrafts
 ```
 
-下文命令中的 `hugo` 均可替换成 `.\.tools\hugo.exe`。
+In the commands below, you can replace `hugo` with `.\.tools\hugo.exe`.
 
-## 写文章
+## Writing posts
 
-创建一篇独立文章：
+Create a standalone post:
 
 ```powershell
 hugo new content posts/my-first-post.md
 ```
 
-如果文章需要图片，推荐创建一个文章目录：
+For posts with images, use a page bundle:
 
 ```powershell
 hugo new content posts/my-note/index.md
 ```
 
-将图片放在 `content/posts/my-note/` 中，在正文通过 `![图片说明](image.png)` 引用。
+Place images in `content/posts/my-note/` and reference them with `![Image description](image.png)`.
 
-新文章使用 `archetypes/posts.md` 模板，默认 `draft: true`。编辑文件顶部的标题、日期、摘要和标签，再填写正文：
+New posts use `archetypes/posts.md` and have `draft: true` by default. Edit the title, date, summary, and tags in the front matter, then write the body:
 
 ```yaml
-title: "文章标题"
+title: "Post title"
 date: 2026-10-07T09:00:00+08:00
 draft: true
 author: "xiangxin"
-description: "搜索引擎和分享卡片使用的简短说明。"
-summary: "文章列表显示的摘要。"
-tags: ["大模型", "工程实践"]
+description: "A short description for search engines and link previews."
+summary: "A summary displayed in post listings."
+tags: ["LLM", "Engineering"]
 ShowToc: true
 ```
 
-数学公式会自动渲染，无需在文章顶部添加开关。行内公式使用 `$...$`，独立公式使用 `$$...$$`；Hugo 在构建时将公式转换为 MathML，无需加载外部公式脚本。正文中的普通美元符号需写作 `\\$`（两个反斜杠加美元符号），避免被识别为公式边界；代码块中的美元符号保持原样。写法与排版可参考 `content/posts/writing-example.md`；该示例默认是草稿。
+Math is rendered automatically; no front matter switch is needed. Use `$...$` for inline equations and `$$...$$` for display equations. Hugo converts them to MathML during the build, so readers do not need an external math script. For a literal dollar sign in prose, write `\\$` in the Markdown source (two backslashes followed by a dollar sign). Dollar signs in code blocks can be written normally. See `content/posts/writing-example.md` for formatting examples; it remains a draft by default.
 
-准备发布时，将 `draft: true` 改为 `draft: false`。未来日期的文章在日期到达前默认不会生成；需要检查时可以在本地增加 `--buildFuture`。
+When a post is ready, change `draft: true` to `draft: false`. Future-dated posts are excluded until their publication date. Add `--buildFuture` to a local preview command to inspect them early.
 
-## 检查与发布
+## Building and publishing
 
-先验证正式构建：
+Check the production build first:
 
 ```powershell
-hugo --gc --minify
+hugo --gc --minify --panicOnWarning
 ```
 
-生成的网站位于 `public/`。此目录是构建产物，无需提交。
+Generated files are written to `public/`. This directory contains build output and should not be committed.
 
-在 GitHub 仓库中进入 **Settings → Pages → Build and deployment → Source**，选择 **GitHub Actions**。将改动提交并推送到 `main` 分支后，`.github/workflows/hugo.yml` 会使用 Hugo 0.167.0 构建并部署网站，也可以在 **Actions** 页面手动运行该工作流。
+In the GitHub repository, open **Settings → Pages → Build and deployment → Source** and select **GitHub Actions**. Commits pushed to `main` trigger `.github/workflows/hugo.yml`, which builds the site with Hugo 0.167.0 and deploys it. You can also start the workflow manually from the **Actions** tab.
 
-第一次启用或部署失败时，到 GitHub 仓库的 **Actions** 页面检查构建日志。部署成功后访问 <https://schofi.github.io/>。
+If deployment fails, inspect the workflow logs in **Actions**. Once deployment succeeds, visit <https://schofi.github.io/>.
 
-## 常用内容位置
+## Content and configuration
 
-| 位置 | 用途 |
+| Location | Purpose |
 | --- | --- |
-| `content/posts/` | 文章与文章配图 |
-| `content/about.md` | 关于页面 |
-| `content/archives.md` | 归档页面 |
-| `content/search.md` | 搜索页面 |
-| `archetypes/posts.md` | 新文章模板 |
-| `hugo.yaml` | 站点配置 |
-| `themes/PaperMod/` | PaperMod 主题子模块 |
-| `.github/workflows/hugo.yml` | GitHub Pages 构建与部署 |
+| `content/posts/` | Posts and their images |
+| `content/about.md` | About page |
+| `content/archives.md` | Archive page |
+| `content/search.md` | Search page |
+| `content/tags/notes/_index.md` | Notes tag and a redirect for its previous URL |
+| `archetypes/posts.md` | Template for new posts |
+| `hugo.yaml` | Site configuration |
+| `themes/PaperMod/` | PaperMod theme submodule |
+| `.github/workflows/hugo.yml` | GitHub Pages build and deployment |
 
-站名、首页介绍、菜单和社交链接在 `hugo.yaml` 中修改。定制样式和模板位于站点自身的 `assets/`、`layouts/` 中，避免直接修改主题子模块。
+Edit `hugo.yaml` to change the site title, home introduction, menu, or social links. The site uses English for its interface, content, dates, search index, and RSS feed. Custom styles and templates live in the site's `assets/` and `layouts/` directories, rather than inside the theme submodule.
 
-`layouts/baseof.html`、`layouts/rss.xml` 和 `layouts/_partials/templates/opengraph.html` 保留了 PaperMod 原始模板，仅将旧语言属性换成 Hugo 0.167.0 的 `Direction` / `Locale`。更新主题时应一并检查这三个兼容模板。
+`layouts/baseof.html`, `layouts/rss.xml`, and `layouts/_partials/templates/opengraph.html` retain the original PaperMod templates with deprecated language properties replaced by Hugo 0.167.0's `Direction` and `Locale`. Review these three compatibility overrides when updating the theme.
 
-## 更新主题
+## Updating the theme
 
-主题固定在一个 Git 提交上，更新时执行：
+The theme is pinned to a Git commit. To update it:
 
 ```powershell
 git submodule update --remote --merge themes/PaperMod
-hugo --gc --minify
+hugo --gc --minify --panicOnWarning
 ```
 
-本地检查首页、文章、归档、搜索及手机布局后，提交 `themes/PaperMod` 的子模块指针变更。若新版本有不兼容改动，先处理再发布。
+Check the homepage, posts, archive, search, and mobile layout locally, then commit the updated `themes/PaperMod` submodule reference. Resolve any compatibility issues before publishing.
 
-## 致谢
+## Credits
 
-博客的阅读体验参考 [Lil’Log](https://lilianweng.github.io/)，由 [Hugo](https://gohugo.io/) 和 [PaperMod](https://github.com/adityatelange/hugo-PaperMod) 提供支持。本站文章独立撰写。
+The reading experience is inspired by [Lil’Log](https://lilianweng.github.io/). The site is powered by [Hugo](https://gohugo.io/) and [PaperMod](https://github.com/adityatelange/hugo-PaperMod). Blog content is written independently.
