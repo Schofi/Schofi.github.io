@@ -1,0 +1,109 @@
+baseURL: https://schofi.github.io/
+title: Schofi 的博客
+theme: PaperMod
+locale: zh-CN
+defaultContentLanguage: zh
+hasCJKLanguage: true
+timeZone: Asia/Shanghai
+enableRobotsTXT: true
+buildDrafts: false
+buildFuture: false
+pagination:
+  pagerSize: 10
+
+outputs:
+  home: [HTML, RSS, JSON]
+
+taxonomies:
+  tag: tags
+  category: categories
+
+params:
+  env: production
+  author: xiangxin
+  description: 记录关于 AI Agent、大模型训练与工程实践的学习、实验和思考。
+  keywords: [Schofi, xiangxin, AI Agent, LLM, Agentic RL, 技术博客]
+  mainSections: [posts]
+  DateFormat: '2006 年 1 月 2 日'
+  defaultTheme: auto
+  disableThemeToggle: false
+  ShowReadingTime: true
+  ShowPostNavLinks: true
+  ShowBreadCrumbs: true
+  ShowCodeCopyButtons: true
+  ShowRssButtonInSectionTermList: true
+  ShowShareButtons: false
+  ShowWordCount: false
+  ShowToc: true
+  TocOpen: true
+  UseHugoToc: true
+  disableSpecial1stPost: true
+  comments: false
+  hideSummary: false
+  assets:
+    favicon: /favicon.svg
+    safari_pinned_tab: /favicon.svg
+    theme_color: '#376850'
+    disableHLJS: true
+  label:
+    text: Schofi
+  homeInfoParams:
+    Title: '👋 你好，我是 Schofi'
+    Content: |
+      在这里，记录学习、实验与思考。
+
+      关注 **AI Agent · 大模型训练 · 工程实践**，把遇到的问题和逐渐想明白的事情写下来。
+  socialIcons:
+    - name: github
+      title: GitHub
+      url: https://github.com/Schofi
+    - name: rss
+      title: RSS 订阅
+      url: /index.xml
+  fuseOpts:
+    isCaseSensitive: false
+    shouldSort: true
+    ignoreLocation: true
+    threshold: 0.35
+    minMatchCharLength: 1
+    limit: 20
+    keys: [title, summary, content]
+
+menu:
+  main:
+    - identifier: posts
+      name: 文章
+      url: /posts/
+      weight: 10
+    - identifier: archives
+      name: 归档
+      url: /archives/
+      weight: 20
+    - identifier: search
+      name: 搜索
+      url: /search/
+      weight: 30
+    - identifier: tags
+      name: 标签
+      url: /tags/
+      weight: 40
+    - identifier: about
+      name: 关于
+      url: /about/
+      weight: 50
+
+markup:
+  highlight:
+    noClasses: false
+    lineNos: false
+  goldmark:
+    extensions:
+      passthrough:
+        enable: true
+        delimiters:
+          block: [['$$', '$$'], ['\[', '\]']]
+          inline: [['$', '$'], ['\(', '\)']]
+  tableOfContents:
+    startLevel: 2
+    endLevel: 3
+    ordered: false

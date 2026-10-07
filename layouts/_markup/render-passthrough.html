@@ -1,0 +1,3 @@
+{{- $options := dict "output" "mathml" "displayMode" (eq .Type "block") -}}
+{{- transform.ToMath .Inner $options -}}
+
