@@ -1,16 +1,19 @@
 ---
 title: "An AI Roadmap for 2030: Verifiable, Affordable, and Governable Outcomes"
 date: 2026-10-14T12:00:00+08:00
+lastmod: 2026-10-15T10:18:52+08:00
 draft: false
 author: "xiangxin"
-description: "Six additions to an AI roadmap for 2030, examining verification, organization, recovery, calibration against reality, human control, and falsifiable forecasts."
-summary: "The defining challenge for AI in 2030 is turning intelligence into reliable outcomes. Drawing on Anthropic’s early roadmap and later public work, this essay examines correlated agent errors, recovery from autonomous failures, and the evidence that should change our forecasts."
-tags: ["AI", "Agents", "Research", "Predictions", "AI Safety"]
+description: "Six engineering and governance constraints on AI in 2030, and how programmatic multimodal creation, visual feedback, and sustained tool orchestration could change what systems deliver."
+summary: "The defining challenge for AI in 2030 is turning intelligence into reliable outcomes. This essay examines six constraints, then uses recent code-generated animation demos to consider editable creative projects, visual verification, and the costs of long-running tasks."
+tags: ["AI", "Agents", "Research", "Predictions", "AI Safety", "Multimodal AI"]
 ShowToc: true
 TocOpen: false
 ---
 
 [中文版](/posts/ai-2030-roadmap-review-zh/)
+
+*Updated October 15, 2026: Added section 7 on what code-generated animation and multimodal tool orchestration suggest about AI deliverables in 2030.*
 
 Anthropic’s July 2021 *Concise Research Roadmap* already discussed software engineering assistants, data from diffs and pull requests, test-time compute, reinforcement learning for tool use, and de-risking hardware options such as TPUs and Trainium. Its later public work on Project Glasswing, Scion, and Antique offers concrete examples of how those questions have evolved.[^roadmap][^scion][^glasswing]
 
@@ -138,9 +141,59 @@ Technical claims should respect the same boundaries:
 
 Anthropic’s public safety roadmap also combines interpretability with other evaluation methods and assigns different confidence levels to different goals.[^safety] A vision should not turn unresolved research questions into engineering guarantees ahead of time.
 
-## 7. My baseline for 2030
+## 7. From generated clips to complete, editable creative projects
 
-By 2030, I expect AI teams capable of sustained responsibility for complete, complex projects in software engineering, mathematical proof, and some scientific tasks with clear feedback. This is a conditional judgment: model capability must advance alongside independent verification, feedback from reality, organizational governance, and acceptable costs across the full lifecycle.
+Recent code-generated animation demos make the preceding questions tangible. An October 15 report by QbitAI relayed several creators’ demonstrations: a paper boat, an ocean surface, and an animation about a life rendered with JavaScript, alongside a musical combining Suno, ElevenLabs, and Three.js. The life animation reportedly took about two hours, with roughly 27 million tokens of total task usage at Max effort.[^media-demos]
+
+The account above comes from **media coverage combining examples and creators’ own descriptions; this essay has not independently reproduced the work**. The language named in the report is JavaScript, not Java. The account of how the musical’s tools were used still includes the reporter’s conjecture, and the article provides no complete execution log. Claims about Fable 5.5, Opus 5.6, or routing to an experimental rollout remain speculation. The official model overview currently lists models including Opus 5.5 and Fable 5.1. Familiarity with the name VoxelBench cannot identify the model weights serving a session or establish a training method.[^claude-models]
+
+Two technical approaches to the creative workflow are nevertheless worth distinguishing:
+
+| Approach | Main deliverables | What needs verification |
+| --- | --- | --- |
+| Programmatic generation | Code describing geometry, materials, motion, cameras, or synthesized sound, with a runtime producing the media | Whether the program runs, parameter changes remain local, and state across frames and rendering performance remain stable |
+| Multimodal tool orchestration | Music, voices, images, or other assets produced by specialized tools, plus the scenes and timelines that organize them | Asset provenance, call records, licensing and permissions, costs, audiovisual synchronization, and the effects of replacing an individual asset |
+
+### Code can serve as an intermediate representation for multimodal creation
+
+Three.js exposes scenes, cameras, and renderers as explicit objects; Web Audio provides audio nodes, signal processing, and timing controls.[^media-apis] These interfaces give models a way to translate creative intent into structures that can be edited and executed.
+
+In an ocean animation, for example, wave speed, camera trajectory, lighting color, and volume curves can remain accessible as parameters. When a user asks to “extend only the sunset, keeping the music and camera position unchanged,” the system can modify the project through explicit state instead of treating the entire work as an indivisible result.
+
+The value of this representation lies in **local editability, composability, and inspectability**. It does not automatically guarantee physical correctness, narrative coherence, or aesthetic quality. Programs can still produce intersecting geometry, numerical errors, incorrect lighting, and audiovisual drift. A small amount of code can describe some very long animations, but that does not imply 4K at 120 frames per second on any device. Asset sizes, the runtime, and rendering compute still count toward the cost.
+
+I find hybrid systems more promising: programs control structure and timing, while specialized generative models supply media assets suited to their strengths. Progress in code-generated animation does not establish that image or video generation models will be replaced across the board.
+
+### A visual feedback loop does not establish visual reinforcement learning
+
+A workflow worth building could look like this:
+
+> Requirements and budget → storyboard and constraints → write code or call media tools → render, sample, and listen → inspect the results → revise, stop, or deliver.
+
+This is an architectural proposal, not a reconstruction of how the demos above ran behind the scenes.
+
+Verification should cover two levels. One checks execution, duration, resolution, audio clipping, and synchronization error. The other assesses composition, pacing, stylistic consistency, and expressive effect. A vision-language model can contribute to the second level, but its scores also need independent review and calibration against human preferences. Another model finding the result attractive is insufficient for acceptance.
+
+We also need to distinguish **self-inspection at inference time** from **reinforcement learning during training**. An agent that writes code, inspects the render, and revises it is running an inference-time tool loop. Claiming that a model was trained through reinforcement learning on such feedback requires evidence about its training process and optimization. The appearance of a finished work cannot establish that the model uses a particular visual reward model or shading algorithm, or that it has acquired a reliable model of the physical world.
+
+### Long-running tasks need cost accounting and stopping rules
+
+The figure of 27 million tokens cannot be converted directly into “hundreds of rounds of visual self-iteration,” nor does it imply an unlimited compute budget. Assessing a long task requires separating input, output, cache reads and writes, and calls from the main agent and subagents, then checking the actual tool traces. Repeatedly reading context is different from generating new reasoning. In the official documentation, effort adjusts reasoning expenditure; it neither identifies the model nor specifies a fixed token budget.[^inference-budget]
+
+Scaling test-time compute therefore raises practical questions: does another round of spending improve quality? When should the system stop, switch tools, or ask the user to decide? If a task runs for two hours and still needs several hours of manual repair, a four-line prompt does not demonstrate efficient delivery.
+
+For 2030, I would judge asynchronous creative systems against four criteria:
+
+1. **Cost of revision:** When changing a shot, duration, or color palette, can the system preserve other approved content and complete the adjustment with little rework?
+2. **Quality versus total cost:** For comparable tasks and budgets, do more reasoning and rendering rounds improve independent evaluations? Are failed attempts reported alongside the best samples?
+3. **Reproducible project delivery:** Along with the finished media, does the system retain source code, dependency versions, an asset inventory, parameters, and running instructions? Does it identify external services whose behavior cannot be fully reproduced?
+4. **Controlled execution of long tasks:** Are there budget caps, permission boundaries, checkpoints, cancellation, and recovery mechanisms that let the user understand progress and take over?
+
+This brings multimodal creation back to the central argument: **the promising advance is the ability of small teams to obtain complete creative projects that can be edited, inspected, and understood in terms of cost.** Whether a system delivers that is a better test of a 2030 forecast than the spectacle of a single demonstration.
+
+## 8. My baseline for 2030
+
+By 2030, I expect AI teams capable of sustained responsibility for complete, complex projects in software engineering, mathematical proof, editable multimodal creation, and some scientific tasks with clear feedback. This is a conditional judgment: model capability must advance alongside independent verification, feedback from reality, organizational governance, and acceptable costs across the full lifecycle.
 
 A “fully autonomous country of geniuses” can serve as an upside scenario to explore. When judging the roadmap, I would look for two kinds of evidence: **outcomes that withstand independent scrutiny, and the ability of people to contain failures, restore operations, and take over when the system is wrong.**
 
@@ -150,3 +203,7 @@ A “fully autonomous country of geniuses” can serve as an upside scenario to 
 [^economics]: Anthropic, [Scenarios for our Economic Future](https://www.anthropic.com/institute/econ-scenarios), September 2026. The tool presents scenarios conditional on assumptions, rather than a prediction of one future.
 [^grace]: Dario Amodei, [Machines of Loving Grace](https://darioamodei.com/essay/machines-of-loving-grace), October 2024.
 [^safety]: Anthropic, [Frontier Safety Roadmap](https://www.anthropic.com/responsible-scaling-policy/roadmap), accessed October 14, 2026.
+[^media-demos]: QbitAI, “Claude 疑似新模型曝光！代码直出画面音效，《汉密尔顿》都做出来了,” October 15, 2026. The report is available as a [Sohu reprint](https://m.sohu.com/a/1087901518_610300); this essay cross-checked the [same article on Phoenix](https://tech.ifeng.com/c/8xEgUKlaOlv). The examples and usage figures are reported claims and do not establish model identity, the full implementation, or training methods.
+[^claude-models]: Anthropic, [Models overview](https://platform.claude.com/docs/en/models/overview) and [Introducing Claude Opus 5.5](https://www.anthropic.com/claude-opus-5-5), accessed October 15, 2026. Official product information does not confirm how the community sessions above were actually routed.
+[^media-apis]: [Three.js: Creating a scene](https://threejs.org/manual/pages/creating-a-scene.html); [MDN: Web Audio API](https://developer.mozilla.org/en-US/docs/Web/API/Web_Audio_API). These documents describe interface capabilities; they do not establish how the works above were implemented.
+[^inference-budget]: Anthropic, [Effort](https://platform.claude.com/docs/en/build-with-claude/effort), [Prompt caching: Tracking cache performance](https://platform.claude.com/docs/en/build-with-claude/prompt-caching#tracking-cache-performance), and [Claude Code: Manage costs effectively](https://code.claude.com/docs/en/costs), accessed October 15, 2026. Cached input, output, and subtask requests need to be understood separately; total task usage does not reveal the number of visual feedback rounds.
