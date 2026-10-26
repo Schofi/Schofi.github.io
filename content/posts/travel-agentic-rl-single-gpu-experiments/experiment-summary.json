@@ -1,0 +1,107 @@
+{
+    "verified_at":  "2026-10-26T12:23:37.246032+08:00",
+    "rl":  {
+               "run":  "saved/output/grpo_single_gpu/run-20261025_174212-58421/v0-20261025-174235",
+               "exit_code":  0,
+               "logged_update_records":  200,
+               "final_metrics":  {
+                                     "global_step/max_steps":  "200/200",
+                                     "loss":  -0.35386199,
+                                     "reward":  0.51300001,
+                                     "kl":  0.00025583,
+                                     "entropy/mean":  0.11201324,
+                                     "grad_norm":  0.0930235,
+                                     "learning_rate":  0.0,
+                                     "epoch":  1.0
+                                 },
+               "cleanup":  {
+                               "cleanup_complete":  true,
+                               "global_step":  200,
+                               "vllm_mode":  "colocate",
+                               "timestamp":  1792967404.4901729
+                           },
+               "checkpoint_global_step":  200,
+               "checkpoint_files":  {
+                                        "README.md":  5440,
+                                        "adapter_model.safetensors":  264308896,
+                                        "adapter_config.json":  1172,
+                                        "additional_config.json":  67,
+                                        "training_args.bin":  10705,
+                                        "args.json":  28471,
+                                        "optimizer.pt":  528915403,
+                                        "scheduler.pt":  1465,
+                                        "rng_state.pth":  14709,
+                                        "trainer_state.json":  225569
+                                    },
+               "train_summary":  [
+                                     {
+                                         "train_runtime":  46027.8869,
+                                         "train_loss":  -0.05008117,
+                                         "global_step/max_steps":  "200/200",
+                                         "elapsed_time":  "12h 47m 8s"
+                                     }
+                                 ],
+               "hyperparameters":  {
+                                       "rlhf_type":  "grpo",
+                                       "model":  "SFT checkpoint-400 merged",
+                                       "tuner_type":  "lora",
+                                       "lora_rank":  32,
+                                       "torch_dtype":  "bfloat16",
+                                       "vllm_mode":  "colocate",
+                                       "vllm_enforce_eager":  true,
+                                       "sleep_level":  1,
+                                       "max_length":  16384,
+                                       "max_completion_length":  2048,
+                                       "max_turns":  13,
+                                       "num_generations":  2,
+                                       "generation_batch_size":  2,
+                                       "gradient_accumulation_steps":  2,
+                                       "learning_rate":  1E-06,
+                                       "report_to":  [
+                                                         "tensorboard"
+                                                     ]
+                                   },
+               "input_rows":  200,
+               "input_token_min":  1217,
+               "input_token_max":  1292,
+               "input_source_sha256":  "a938517ef7474e18c2ea867ec6ee989fa3a11d2d0e5076f52a3129bd9d7606e8"
+           },
+    "base_sft_comparison":  {
+                                "complete":  true,
+                                "expected_count":  80,
+                                "judged_count":  80,
+                                "judge_error_count":  0,
+                                "baseline_mean":  6.6206,
+                                "sft_mean":  6.8394,
+                                "mean_difference":  0.2187,
+                                "sft_wins":  42,
+                                "baseline_wins":  37,
+                                "ties":  1,
+                                "baseline_final_answers":  77,
+                                "sft_final_answers":  78
+                            },
+    "tool_repeat_audit":  {
+                              "definition":  "Same sample, tool name and JSON arguments; object key order ignored. Count execution start once.",
+                              "baseline":  {
+                                               "repeat_samples":  5,
+                                               "samples":  80,
+                                               "reached_turn_13":  10,
+                                               "tool_calls":  473,
+                                               "excess_identical_calls":  9
+                                           },
+                              "sft":  {
+                                          "repeat_samples":  31,
+                                          "samples":  80,
+                                          "reached_turn_13":  30,
+                                          "tool_calls":  915,
+                                          "excess_identical_calls":  172
+                                      },
+                              "source":  "test_output/sft_tool_repeat_audit_20261025/REPORT.md"
+                          },
+    "limitations":  [
+                        "RL checkpoint-200 vs SFT400 independent evaluation has not been completed.",
+                        "Ticket and flight tools use model-simulated data.",
+                        "All-tensor finite-value verification was performed for the three-step checkpoint, not checkpoint-200.",
+                        "Base/SFT timing includes concurrent GPU use and external tools."
+                    ]
+}
