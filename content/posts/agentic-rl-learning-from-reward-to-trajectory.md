@@ -1,10 +1,10 @@
 ---
-title: "从一句回答到一条轨迹：我的 Agentic RL 入门学习记录"
+title: "Agentic RL 领域地图：研究方向判断与论文跟进"
 date: 2026-10-30T00:00:00+08:00
 draft: false
 author: "xiangxin"
-description: "从 PBRFT 与 RLHF 的关系出发，用代码修复例子理解状态、观测、动作、轨迹回报和信用分配，再建立阅读 Agentic RL 论文的坐标系。"
-summary: "读 Agentic RL 综述时，我先卡在 PBRFT、七元组和期望回报公式上。把它们代入一次代码修复过程后，才逐渐分清：环境反馈不等于奖励，累积回报不等于信用分配，使用工具也不等于训练了 Agent。这篇文章记录这条理解路径，以及接下来如何用同一套问题阅读论文、设计实验。"
+description: "从任务域、训练能力、状态与观测、奖励和更新机制出发，建立 Agentic RL 的入门领域地图，用于判断研究方向、比较工作与持续跟进论文。"
+summary: "读到一篇 Agentic RL 论文，怎样判断它属于哪个方向、训练了什么能力、改变了哪一环？这篇文章以代码修复为例，理解状态、观测、动作、轨迹回报和信用分配，再用“任务域 × 训练能力”和论文记录卡建立领域地图，让后续阅读有定位、比较有依据。"
 tags: ["Agentic RL", "Reinforcement Learning", "Post-training", "Learning Notes"]
 ShowToc: true
 TocOpen: false
@@ -19,7 +19,7 @@ isCJKLanguage: true
 
 我读 *The Landscape of Agentic Reinforcement Learning for LLMs: A Survey* 时，最初记住的是一句话：“PBRFT 优化一段话，Agentic RL 优化一条轨迹。”但继续看状态、观测、奖励和目标函数时，才发现这句话只是入口，不能代替对训练过程的理解。[综述第 2 节](https://arxiv.org/html/2509.02547v5#S2)
 
-这篇文章记录我从几个具体疑问出发，逐渐建立概念之间联系的过程。文中的概率、奖励和任务流程用于解释概念，不代表实际完成了训练或取得了相应提升。
+我把这篇文章作为一张持续补充的 Agentic RL 入门领域地图：先理解任务与训练的基本概念，再用“任务域 × 训练能力”给研究方向定位，用奖励、更新机制和验证证据比较具体工作。以后跟进一篇论文，就沿着这套坐标记录它解决什么问题、改进哪一环、证据支持到哪里。文中的概率、奖励和任务流程用于解释概念，不代表实际完成了训练或取得了相应提升。
 
 ## 1. 第一个疑问：PBRFT 是什么，和 RLHF 有什么关系
 
