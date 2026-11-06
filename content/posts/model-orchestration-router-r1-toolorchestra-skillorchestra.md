@@ -9,6 +9,9 @@ tags: ["Model Routing", "Agentic RL", "PPO", "GRPO", "Tool Use", "Skills", "Simu
 ShowToc: true
 TocOpen: false
 isCJKLanguage: true
+cover:
+  image: "/images/posts/model-orchestration-learning-map.png"
+  hidden: true
 ---
 
 给一个系统这样的任务：
@@ -74,6 +77,8 @@ isCJKLanguage: true
 | Router-R1 | 候选大模型，多轮问答 | PPO 更新后的调度模型参数 |
 | ToolOrchestra | 模型、搜索、代码与业务工具 | GRPO 更新后的调度模型参数 |
 | SkillOrchestra | 模型或带工具的专家 Agent | 技能定义、专家画像和执行经验手册 |
+
+[![三种调度方法对照图。Router-R1 调度候选大模型，经多轮轨迹评分用 PPO 和 GAE 更新调度模型。ToolOrchestra 调度模型与工具，经同题轨迹比较用 GRPO 更新调度模型。SkillOrchestra 按技能需求选择专家，从探索轨迹归纳技能、统计专家表现，并通过验证选定外部手册。](/images/posts/model-orchestration-learning-map.png)](/images/posts/model-orchestration-learning-map.png)
 
 这不是一条“后者完全替代前者”的升级路线。它们展示了同一类问题的不同建模和学习方式。
 
