@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="1180" viewBox="0 0 960 1180" role="img" aria-labelledby="title desc">
+<title id="title">上下文管理：从原始历史到可用状态</title>
+<desc id="desc">折叠旧步骤，保留任务依据与最新反馈，再生成下一步动作。</desc>
+<rect width="960" height="1180" fill="#fafaf6"/>
+<text x="42" y="35" dominant-baseline="text-before-edge" text-anchor="start" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-weight="700" font-size="16" fill="#5c7068">AGENT POST-TRAINING  /  DATA ENGINEERING</text>
+<text x="42" y="74" dominant-baseline="text-before-edge" text-anchor="start" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-weight="700" font-size="34" fill="#213d35">上下文管理：从原始历史到可用状态</text>
+<text x="42" y="129" dominant-baseline="text-before-edge" text-anchor="start" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-weight="400" font-size="21" fill="#5c7068">折叠旧步骤，保留任务依据与最新反馈，再生成下一步动作。</text>
+<polyline points="42,176 918,176" fill="none" stroke="#d4dfd6" stroke-width="1" stroke-linejoin="round"/>
+<rect x="42" y="209" width="394" height="526" rx="15" fill="#e7eef4" stroke="#779285"/>
+<rect x="524" y="209" width="394" height="526" rx="15" fill="#e6f0e8" stroke="#779285"/>
+<text x="239" y="232" dominant-baseline="text-before-edge" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-weight="700" font-size="27" fill="#213d35">追加式完整历史</text>
+<text x="721" y="232" dominant-baseline="text-before-edge" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-weight="700" font-size="27" fill="#213d35">折叠后的可见上下文</text>
+<rect x="65" y="293" width="348" height="108" rx="15" fill="#f9fbfc" stroke="#779285"/>
+<text x="239.0" y="310" dominant-baseline="text-before-edge" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-weight="700" font-size="27" fill="#213d35">任务与工具</text>
+<text x="239.0" y="350" dominant-baseline="text-before-edge" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-weight="400" font-size="22" fill="#5c7068">目标、约束、可用操作</text>
+<rect x="65" y="417" width="348" height="108" rx="15" fill="#f9fbfc" stroke="#779285"/>
+<text x="239.0" y="434" dominant-baseline="text-before-edge" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-weight="700" font-size="27" fill="#213d35">旧步骤 1 … k</text>
+<text x="239.0" y="474" dominant-baseline="text-before-edge" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-weight="400" font-size="22" fill="#5c7068">请求、返回与中间决策</text>
+<rect x="65" y="578" width="348" height="108" rx="15" fill="#f9fbfc" stroke="#779285"/>
+<text x="239.0" y="595" dominant-baseline="text-before-edge" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-weight="700" font-size="27" fill="#213d35">最近一次交互</text>
+<text x="239.0" y="635" dominant-baseline="text-before-edge" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-weight="400" font-size="22" fill="#5c7068">动作解释 + 调用 + 返回</text>
+<rect x="547" y="293" width="348" height="108" rx="15" fill="#fbfdf9" stroke="#779285"/>
+<text x="721.0" y="310" dominant-baseline="text-before-edge" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-weight="700" font-size="27" fill="#213d35">任务与工具</text>
+<text x="721.0" y="350" dominant-baseline="text-before-edge" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-weight="400" font-size="22" fill="#5c7068">目标、约束、可用操作</text>
+<rect x="547" y="417" width="348" height="142" rx="15" fill="#fbfdf9" stroke="#779285"/>
+<text x="721.0" y="434" dominant-baseline="text-before-edge" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-weight="700" font-size="27" fill="#213d35">多尺度历史摘要</text>
+<text x="721.0" y="474" dominant-baseline="text-before-edge" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-weight="400" font-size="22" fill="#5c7068">已确认事实 + 来源</text>
+<text x="721.0" y="506" dominant-baseline="text-before-edge" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-weight="400" font-size="22" fill="#5c7068">待验证事项 + 关键约束</text>
+<rect x="547" y="578" width="348" height="108" rx="15" fill="#fbfdf9" stroke="#779285"/>
+<text x="721.0" y="595" dominant-baseline="text-before-edge" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-weight="700" font-size="27" fill="#213d35">最近一次交互</text>
+<text x="721.0" y="635" dominant-baseline="text-before-edge" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-weight="400" font-size="22" fill="#5c7068">保留最新动作与完整观察</text>
+<polyline points="436,488 524,488" fill="none" stroke="#779285" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="524,488 512.1834452542265,493.41932043157976 512.1834452542265,482.58067956842024" fill="#779285"/>
+<text x="480" y="438" dominant-baseline="text-before-edge" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-weight="400" font-size="23" fill="#5c7068">折叠</text>
+<polyline points="721,735 721,775 480,775 480,804" fill="none" stroke="#779285" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="480,804 474.58067956842024,792.1834452542265 485.41932043157976,792.1834452542265" fill="#779285"/>
+<rect x="120" y="805" width="720" height="101" rx="15" fill="#e6f0e8" stroke="#779285"/>
+<text x="480.0" y="822" dominant-baseline="text-before-edge" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-weight="700" font-size="27" fill="#213d35">模型输出新的折叠指令与下一步动作</text>
+<text x="480.0" y="862" dominant-baseline="text-before-edge" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-weight="400" font-size="22" fill="#5c7068">执行器解析并应用折叠，随后执行工具</text>
+<polyline points="480,906 480,944" fill="none" stroke="#779285" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="480,944 474.58067956842024,932.1834452542265 485.41932043157976,932.1834452542265" fill="#779285"/>
+<rect x="120" y="945" width="720" height="101" rx="15" fill="#f6edda" stroke="#779285"/>
+<text x="480.0" y="962" dominant-baseline="text-before-edge" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-weight="700" font-size="27" fill="#213d35">检查信息是否仍足够支持后续决策</text>
+<text x="480.0" y="1002" dominant-baseline="text-before-edge" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-weight="400" font-size="22" fill="#5c7068">不能把未知写成已知；不能丢掉约束与证据</text>
+<polyline points="42,1107 918,1107" fill="none" stroke="#d4dfd6" stroke-width="1" stroke-linejoin="round"/>
+<text x="42" y="1129" dominant-baseline="text-before-edge" text-anchor="start" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-weight="400" font-size="19" fill="#5c7068">图 3  /  原始日志独立归档；上下文长度取决于摘要与运行时策略。</text>
+</svg>

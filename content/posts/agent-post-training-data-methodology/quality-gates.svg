@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="1310" viewBox="0 0 960 1310" role="img" aria-labelledby="title desc">
+<title id="title">轨迹筛选：先验证，再比较效率</title>
+<desc id="desc">最终答对还不够；成功示范还要可执行、有依据、可追溯。</desc>
+<rect width="960" height="1310" fill="#fafaf6"/>
+<text x="42" y="35" dominant-baseline="text-before-edge" text-anchor="start" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-weight="700" font-size="16" fill="#5c7068">AGENT POST-TRAINING  /  DATA ENGINEERING</text>
+<text x="42" y="74" dominant-baseline="text-before-edge" text-anchor="start" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-weight="700" font-size="34" fill="#213d35">轨迹筛选：先验证，再比较效率</text>
+<text x="42" y="129" dominant-baseline="text-before-edge" text-anchor="start" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-weight="400" font-size="21" fill="#5c7068">最终答对还不够；成功示范还要可执行、有依据、可追溯。</text>
+<polyline points="42,176 918,176" fill="none" stroke="#d4dfd6" stroke-width="1" stroke-linejoin="round"/>
+<rect x="80" y="210" width="610" height="100" rx="15" fill="#e6f0e8" stroke="#779285"/>
+<text x="385.0" y="227" dominant-baseline="text-before-edge" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-weight="700" font-size="27" fill="#213d35">多次 rollout 得到候选轨迹</text>
+<text x="385.0" y="267" dominant-baseline="text-before-edge" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-weight="400" font-size="22" fill="#5c7068">同题不同执行，保留完整日志</text>
+<polyline points="385,310 385,347" fill="none" stroke="#779285" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="385,347 379.58067956842024,335.1834452542265 390.41932043157976,335.1834452542265" fill="#779285"/>
+<rect x="80" y="348" width="610" height="101" rx="15" fill="#e6f0e8" stroke="#779285"/>
+<text x="385.0" y="365" dominant-baseline="text-before-edge" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-weight="700" font-size="27" fill="#213d35">01  协议与执行检查</text>
+<text x="385.0" y="405" dominant-baseline="text-before-edge" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-weight="400" font-size="22" fill="#5c7068">工具调用合法，消息与步骤顺序一致</text>
+<polyline points="385,449 385,486" fill="none" stroke="#779285" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="385,486 379.58067956842024,474.1834452542265 390.41932043157976,474.1834452542265" fill="#779285"/>
+<rect x="80" y="487" width="610" height="101" rx="15" fill="#e6f0e8" stroke="#779285"/>
+<text x="385.0" y="504" dominant-baseline="text-before-edge" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-weight="700" font-size="27" fill="#213d35">02  任务与证据检查</text>
+<text x="385.0" y="544" dominant-baseline="text-before-edge" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-weight="400" font-size="22" fill="#5c7068">结果满足约束，回答受到观察支持</text>
+<polyline points="385,588 385,625" fill="none" stroke="#779285" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="385,625 379.58067956842024,613.1834452542265 390.41932043157976,613.1834452542265" fill="#779285"/>
+<rect x="80" y="626" width="610" height="101" rx="15" fill="#e6f0e8" stroke="#779285"/>
+<text x="385.0" y="643" dominant-baseline="text-before-edge" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-weight="700" font-size="27" fill="#213d35">03  比较有效候选</text>
+<text x="385.0" y="683" dominant-baseline="text-before-edge" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-weight="400" font-size="22" fill="#5c7068">检查冗余、开销与技能覆盖</text>
+<polyline points="385,727 385,764" fill="none" stroke="#779285" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="385,764 379.58067956842024,752.1834452542265 390.41932043157976,752.1834452542265" fill="#779285"/>
+<rect x="80" y="765" width="610" height="101" rx="15" fill="#f6edda" stroke="#779285"/>
+<text x="385.0" y="782" dominant-baseline="text-before-edge" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-weight="700" font-size="27" fill="#213d35">04  按需压缩与格式修复</text>
+<text x="385.0" y="822" dominant-baseline="text-before-edge" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-weight="400" font-size="22" fill="#5c7068">不改变事实、动作语义与证据指向</text>
+<polyline points="385,866 385,903" fill="none" stroke="#779285" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="385,903 379.58067956842024,891.1834452542265 390.41932043157976,891.1834452542265" fill="#779285"/>
+<rect x="80" y="904" width="610" height="101" rx="15" fill="#e6f0e8" stroke="#779285"/>
+<text x="385.0" y="921" dominant-baseline="text-before-edge" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-weight="700" font-size="27" fill="#213d35">05  修改后再次验证</text>
+<text x="385.0" y="961" dominant-baseline="text-before-edge" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-weight="400" font-size="22" fill="#5c7068">必要时在固定环境中重放</text>
+<polyline points="385,1005 385,1042" fill="none" stroke="#779285" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="385,1042 379.58067956842024,1030.1834452542264 390.41932043157976,1030.1834452542264" fill="#779285"/>
+<rect x="80" y="1043" width="610" height="101" rx="15" fill="#e6f0e8" stroke="#779285"/>
+<text x="385.0" y="1060" dominant-baseline="text-before-edge" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-weight="700" font-size="27" fill="#213d35">进入 SFT 成功示范数据集</text>
+<text x="385.0" y="1100" dominant-baseline="text-before-edge" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-weight="400" font-size="22" fill="#5c7068">保存筛选依据、加工版本和监督位置</text>
+<rect x="737" y="354" width="174" height="649" rx="15" fill="#f4e7e1" stroke="#cba58e"/>
+<text x="824" y="378" dominant-baseline="text-before-edge" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-weight="700" font-size="27" fill="#213d35">不通过</text>
+<text x="824" y="447" dominant-baseline="text-before-edge" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-weight="400" font-size="21" fill="#5c7068">按原因归档</text>
+<text x="824" y="505" dominant-baseline="text-before-edge" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-weight="400" font-size="21" fill="#5c7068">任务缺陷</text>
+<text x="824" y="563" dominant-baseline="text-before-edge" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-weight="400" font-size="21" fill="#5c7068">环境异常</text>
+<text x="824" y="621" dominant-baseline="text-before-edge" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-weight="400" font-size="21" fill="#5c7068">协议错误</text>
+<text x="824" y="679" dominant-baseline="text-before-edge" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-weight="400" font-size="21" fill="#5c7068">约束遗漏</text>
+<text x="824" y="737" dominant-baseline="text-before-edge" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-weight="400" font-size="21" fill="#5c7068">证据不足</text>
+<text x="824" y="795" dominant-baseline="text-before-edge" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-weight="400" font-size="21" fill="#5c7068">修复未验证</text>
+<polyline points="690,399 737,399" fill="none" stroke="#b38b76" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="737,399 725.1834452542265,404.41932043157976 725.1834452542265,393.58067956842024" fill="#b38b76"/>
+<polyline points="690,538 737,538" fill="none" stroke="#b38b76" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="737,538 725.1834452542265,543.4193204315798 725.1834452542265,532.5806795684202" fill="#b38b76"/>
+<polyline points="690,955 737,955" fill="none" stroke="#b38b76" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="737,955 725.1834452542265,960.4193204315798 725.1834452542265,949.5806795684202" fill="#b38b76"/>
+<text x="480" y="1181" dominant-baseline="text-before-edge" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-weight="400" font-size="23" fill="#213d35">失败轨迹可用于诊断或专门构造恢复 / 偏好数据。</text>
+<polyline points="42,1237 918,1237" fill="none" stroke="#d4dfd6" stroke-width="1" stroke-linejoin="round"/>
+<text x="42" y="1259" dominant-baseline="text-before-edge" text-anchor="start" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-weight="400" font-size="19" fill="#5c7068">图 4  /  最短不等于最好；必要的核实步骤应当保留。</text>
+</svg>

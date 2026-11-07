@@ -1,0 +1,69 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="1510" viewBox="0 0 960 1510" role="img" aria-labelledby="title desc">
+<title id="title">从任务到模型：数据构建总流程</title>
+<desc id="desc">先隔离评估任务，再采集、验证和训练；最后用独立执行检验。</desc>
+<rect width="960" height="1510" fill="#fafaf6"/>
+<text x="42" y="35" dominant-baseline="text-before-edge" text-anchor="start" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-weight="700" font-size="16" fill="#5c7068">AGENT POST-TRAINING  /  DATA ENGINEERING</text>
+<text x="42" y="74" dominant-baseline="text-before-edge" text-anchor="start" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-weight="700" font-size="34" fill="#213d35">从任务到模型：数据构建总流程</text>
+<text x="42" y="129" dominant-baseline="text-before-edge" text-anchor="start" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-weight="400" font-size="21" fill="#5c7068">先隔离评估任务，再采集、验证和训练；最后用独立执行检验。</text>
+<polyline points="42,176 918,176" fill="none" stroke="#d4dfd6" stroke-width="1" stroke-linejoin="round"/>
+<rect x="160" y="204" width="640" height="101" rx="15" fill="#e6f0e8" stroke="#779285"/>
+<text x="480.0" y="221" dominant-baseline="text-before-edge" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-weight="700" font-size="27" fill="#213d35">01  任务与依据</text>
+<text x="480.0" y="261" dominant-baseline="text-before-edge" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-weight="400" font-size="22" fill="#5c7068">可信资料 / 工具快照 + 约束 + 判定规则</text>
+<polyline points="480,305 480,329" fill="none" stroke="#779285" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="480,329 474.58067956842024,317.1834452542265 485.41932043157976,317.1834452542265" fill="#779285"/>
+<rect x="160" y="330" width="640" height="101" rx="15" fill="#e6f0e8" stroke="#779285"/>
+<text x="480.0" y="347" dominant-baseline="text-before-edge" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-weight="700" font-size="27" fill="#213d35">02  按来源与模板分组切分</text>
+<text x="480.0" y="387" dominant-baseline="text-before-edge" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-weight="400" font-size="22" fill="#5c7068">隔离近似题，固定任务与环境版本</text>
+<polyline points="480,431 480,455 265,455 265,480" fill="none" stroke="#779285" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="265,480 259.58067956842024,468.1834452542265 270.41932043157976,468.1834452542265" fill="#779285"/>
+<polyline points="480,455 710,455 710,480" fill="none" stroke="#779285" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="710,480 704.5806795684202,468.1834452542265 715.4193204315798,468.1834452542265" fill="#779285"/>
+<rect x="60" y="480" width="410" height="100" rx="15" fill="#e6f0e8" stroke="#779285"/>
+<text x="265.0" y="497" dominant-baseline="text-before-edge" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-weight="700" font-size="27" fill="#213d35">训练任务池</text>
+<text x="265.0" y="537" dominant-baseline="text-before-edge" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-weight="400" font-size="22" fill="#5c7068">用于教师采集和数据迭代</text>
+<rect x="510" y="480" width="400" height="134" rx="15" fill="#e7eef4" stroke="#779285"/>
+<text x="710.0" y="497" dominant-baseline="text-before-edge" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-weight="700" font-size="27" fill="#213d35">开发 / 测试任务</text>
+<text x="710.0" y="537" dominant-baseline="text-before-edge" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-weight="400" font-size="22" fill="#5c7068">不进入训练轨迹采集</text>
+<text x="710.0" y="569" dominant-baseline="text-before-edge" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-weight="400" font-size="22" fill="#5c7068">测试集不用于日常调参</text>
+<polyline points="265,580 265,614" fill="none" stroke="#779285" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="265,614 259.58067956842024,602.1834452542265 270.41932043157976,602.1834452542265" fill="#779285"/>
+<rect x="60" y="615" width="410" height="101" rx="15" fill="#e6f0e8" stroke="#779285"/>
+<text x="265.0" y="632" dominant-baseline="text-before-edge" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-weight="700" font-size="27" fill="#213d35">03  教师与环境交互</text>
+<text x="265.0" y="672" dominant-baseline="text-before-edge" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-weight="400" font-size="22" fill="#5c7068">逐步执行，记录真实工具返回</text>
+<polyline points="265,716 265,749" fill="none" stroke="#779285" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="265,749 259.58067956842024,737.1834452542265 270.41932043157976,737.1834452542265" fill="#779285"/>
+<rect x="60" y="750" width="410" height="101" rx="15" fill="#e6f0e8" stroke="#779285"/>
+<text x="265.0" y="767" dominant-baseline="text-before-edge" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-weight="700" font-size="27" fill="#213d35">04  验证并筛选轨迹</text>
+<text x="265.0" y="807" dominant-baseline="text-before-edge" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-weight="400" font-size="22" fill="#5c7068">协议 + 约束 + 证据 + 执行结果</text>
+<polyline points="265,851 265,884" fill="none" stroke="#779285" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="265,884 259.58067956842024,872.1834452542265 270.41932043157976,872.1834452542265" fill="#779285"/>
+<rect x="60" y="885" width="410" height="101" rx="15" fill="#e6f0e8" stroke="#779285"/>
+<text x="265.0" y="902" dominant-baseline="text-before-edge" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-weight="700" font-size="27" fill="#213d35">05  加工 SFT 样本</text>
+<text x="265.0" y="942" dominant-baseline="text-before-edge" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-weight="400" font-size="22" fill="#5c7068">上下文 + 目标输出 + loss mask</text>
+<polyline points="265,986 265,1019" fill="none" stroke="#779285" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="265,1019 259.58067956842024,1007.1834452542265 270.41932043157976,1007.1834452542265" fill="#779285"/>
+<rect x="60" y="1020" width="410" height="101" rx="15" fill="#e6f0e8" stroke="#779285"/>
+<text x="265.0" y="1037" dominant-baseline="text-before-edge" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-weight="700" font-size="27" fill="#213d35">06  训练学生模型</text>
+<text x="265.0" y="1077" dominant-baseline="text-before-edge" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-weight="400" font-size="22" fill="#5c7068">检查序列化、截断与监督位置</text>
+<rect x="540" y="708" width="340" height="330" rx="15" fill="#f0f2eb" stroke="#d4dfd6"/>
+<text x="710" y="735" dominant-baseline="text-before-edge" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-weight="700" font-size="25" fill="#213d35">每一环都留存证据</text>
+<text x="565" y="792" dominant-baseline="text-before-edge" text-anchor="start" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-weight="400" font-size="22" fill="#5c7068">任务与来源版本</text>
+<text x="565" y="834" dominant-baseline="text-before-edge" text-anchor="start" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-weight="400" font-size="22" fill="#5c7068">教师与提示词版本</text>
+<text x="565" y="876" dominant-baseline="text-before-edge" text-anchor="start" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-weight="400" font-size="22" fill="#5c7068">工具与环境版本</text>
+<text x="565" y="918" dominant-baseline="text-before-edge" text-anchor="start" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-weight="400" font-size="22" fill="#5c7068">原始轨迹及拒绝原因</text>
+<text x="565" y="960" dominant-baseline="text-before-edge" text-anchor="start" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-weight="400" font-size="22" fill="#5c7068">训练配置及模型检查点</text>
+<polyline points="910,547 928,547 928,1150 710,1150 710,1180" fill="none" stroke="#779285" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="710,1180 704.5806795684202,1168.1834452542264 715.4193204315798,1168.1834452542264" fill="#779285"/>
+<polyline points="265,1121 265,1180" fill="none" stroke="#779285" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="265,1180 259.58067956842024,1168.1834452542264 270.41932043157976,1168.1834452542264" fill="#779285"/>
+<rect x="60" y="1180" width="850" height="101" rx="15" fill="#e7eef4" stroke="#779285"/>
+<text x="485.0" y="1197" dominant-baseline="text-before-edge" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-weight="700" font-size="27" fill="#213d35">07  学生独立执行与评估</text>
+<text x="485.0" y="1237" dominant-baseline="text-before-edge" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-weight="400" font-size="22" fill="#5c7068">固定预算；比较成功率、证据一致性与成功任务开销</text>
+<polyline points="480,1281 480,1314" fill="none" stroke="#779285" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="480,1314 474.58067956842024,1302.1834452542264 485.41932043157976,1302.1834452542264" fill="#779285"/>
+<rect x="160" y="1315" width="640" height="100" rx="15" fill="#f6edda" stroke="#779285"/>
+<text x="480.0" y="1332" dominant-baseline="text-before-edge" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-weight="700" font-size="27" fill="#213d35">08  归因失败，补充下一轮训练数据</text>
+<text x="480.0" y="1372" dominant-baseline="text-before-edge" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-weight="400" font-size="22" fill="#5c7068">开发集驱动迭代；稳定测试集用于最终检验</text>
+<polyline points="42,1437 918,1437" fill="none" stroke="#d4dfd6" stroke-width="1" stroke-linejoin="round"/>
+<text x="42" y="1459" dominant-baseline="text-before-edge" text-anchor="start" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-weight="400" font-size="19" fill="#5c7068">图 1  /  方法流程与工程建议；不表示已经完成模型训练。</text>
+</svg>

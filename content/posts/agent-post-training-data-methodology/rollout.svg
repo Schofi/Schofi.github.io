@@ -1,0 +1,50 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="1120" viewBox="0 0 960 1120" role="img" aria-labelledby="title desc">
+<title id="title">一次 rollout：决策与环境交替推进</title>
+<desc id="desc">模型生成下一步；执行器运行工具；反馈进入下一轮上下文。</desc>
+<rect width="960" height="1120" fill="#fafaf6"/>
+<text x="42" y="35" dominant-baseline="text-before-edge" text-anchor="start" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-weight="700" font-size="16" fill="#5c7068">AGENT POST-TRAINING  /  DATA ENGINEERING</text>
+<text x="42" y="74" dominant-baseline="text-before-edge" text-anchor="start" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-weight="700" font-size="34" fill="#213d35">一次 rollout：决策与环境交替推进</text>
+<text x="42" y="129" dominant-baseline="text-before-edge" text-anchor="start" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-weight="400" font-size="21" fill="#5c7068">模型生成下一步；执行器运行工具；反馈进入下一轮上下文。</text>
+<polyline points="42,176 918,176" fill="none" stroke="#d4dfd6" stroke-width="1" stroke-linejoin="round"/>
+<rect x="170" y="211" width="620" height="101" rx="15" fill="#e6f0e8" stroke="#779285"/>
+<text x="480.0" y="228" dominant-baseline="text-before-edge" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-weight="700" font-size="27" fill="#213d35">构造当前可见上下文</text>
+<text x="480.0" y="268" dominant-baseline="text-before-edge" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-weight="400" font-size="22" fill="#5c7068">任务 + 工具说明 + 当时已有的历史</text>
+<polyline points="480,312 480,349" fill="none" stroke="#779285" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="480,349 474.58067956842024,337.1834452542265 485.41932043157976,337.1834452542265" fill="#779285"/>
+<rect x="170" y="350" width="620" height="101" rx="15" fill="#e6f0e8" stroke="#779285"/>
+<text x="480.0" y="367" dominant-baseline="text-before-edge" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-weight="700" font-size="27" fill="#213d35">教师生成当前响应</text>
+<text x="480.0" y="407" dominant-baseline="text-before-edge" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-weight="400" font-size="22" fill="#5c7068">工具调用，或任务最终答案</text>
+<polyline points="480,451 480,486 260,486 260,525" fill="none" stroke="#779285" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="260,525 254.58067956842027,513.1834452542265 265.41932043157976,513.1834452542265" fill="#779285"/>
+<polyline points="480,486 710,486 710,525" fill="none" stroke="#779285" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="710,525 704.5806795684202,513.1834452542265 715.4193204315798,513.1834452542265" fill="#779285"/>
+<text x="155" y="491" dominant-baseline="text-before-edge" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-weight="400" font-size="20" fill="#5c7068">继续获取信息</text>
+<text x="810" y="491" dominant-baseline="text-before-edge" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-weight="400" font-size="20" fill="#5c7068">提交答案</text>
+<rect x="60" y="525" width="400" height="101" rx="15" fill="#e6f0e8" stroke="#779285"/>
+<text x="260.0" y="542" dominant-baseline="text-before-edge" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-weight="700" font-size="27" fill="#213d35">执行器运行工具</text>
+<text x="260.0" y="582" dominant-baseline="text-before-edge" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-weight="400" font-size="22" fill="#5c7068">校验名称、参数与调用协议</text>
+<rect x="520" y="525" width="380" height="101" rx="15" fill="#e7eef4" stroke="#779285"/>
+<text x="710.0" y="542" dominant-baseline="text-before-edge" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-weight="700" font-size="27" fill="#213d35">交给验证器</text>
+<text x="710.0" y="582" dominant-baseline="text-before-edge" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-weight="400" font-size="22" fill="#5c7068">判断任务约束与证据</text>
+<polyline points="260,626 260,664" fill="none" stroke="#779285" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="260,664 254.58067956842027,652.1834452542265 265.41932043157976,652.1834452542265" fill="#779285"/>
+<rect x="60" y="665" width="400" height="133" rx="15" fill="#e6f0e8" stroke="#779285"/>
+<text x="260.0" y="682" dominant-baseline="text-before-edge" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-weight="700" font-size="27" fill="#213d35">环境返回观察</text>
+<text x="260.0" y="722" dominant-baseline="text-before-edge" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-weight="400" font-size="22" fill="#5c7068">数据、空结果或错误</text>
+<text x="260.0" y="754" dominant-baseline="text-before-edge" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-weight="400" font-size="22" fill="#5c7068">来自工具执行，并非教师编造</text>
+<polyline points="260,798 260,834" fill="none" stroke="#779285" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="260,834 254.58067956842027,822.1834452542265 265.41932043157976,822.1834452542265" fill="#779285"/>
+<rect x="60" y="835" width="400" height="101" rx="15" fill="#e6f0e8" stroke="#779285"/>
+<text x="260.0" y="852" dominant-baseline="text-before-edge" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-weight="700" font-size="27" fill="#213d35">保存日志并更新上下文</text>
+<text x="260.0" y="892" dominant-baseline="text-before-edge" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-weight="400" font-size="22" fill="#5c7068">完整历史，或验证过的摘要</text>
+<polyline points="60,886 28,886 28,262 170,262" fill="none" stroke="#779285" stroke-width="3" stroke-linejoin="round"/>
+<polygon points="170,262 158.18344525422648,267.41932043157976 158.18344525422648,256.58067956842024" fill="#779285"/>
+<rect x="520" y="707" width="380" height="229" rx="15" fill="#f6edda" stroke="#779285"/>
+<text x="710" y="731" dominant-baseline="text-before-edge" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-weight="700" font-size="25" fill="#213d35">同时设置执行预算</text>
+<text x="710" y="784" dominant-baseline="text-before-edge" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-weight="400" font-size="22" fill="#5c7068">最大交互步数</text>
+<text x="710" y="824" dominant-baseline="text-before-edge" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-weight="400" font-size="22" fill="#5c7068">token 与调用开销</text>
+<text x="710" y="864" dominant-baseline="text-before-edge" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-weight="400" font-size="22" fill="#5c7068">超时、异常与终止原因</text>
+<text x="480" y="979" dominant-baseline="text-before-edge" text-anchor="middle" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-weight="400" font-size="23" fill="#213d35">采集前隔离参考答案；每步只使用当时可见的信息。</text>
+<polyline points="42,1047 918,1047" fill="none" stroke="#d4dfd6" stroke-width="1" stroke-linejoin="round"/>
+<text x="42" y="1069" dominant-baseline="text-before-edge" text-anchor="start" font-family="Microsoft YaHei, PingFang SC, sans-serif" font-weight="400" font-size="19" fill="#5c7068">图 2  /  工具可连接固定模拟环境或真实环境；必须注明数据来源。</text>
+</svg>
