@@ -1,0 +1,99 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="1300" viewBox="0 0 960 1300" role="img" aria-labelledby="title desc">
+  <title id="title">奖励建模与过程优化：四个不同的改动层面</title>
+  <desc id="desc">按数据监督、评分目标、分数使用和独立验证四个环节，组织从BT奖励模型到PRM、PURE、PRIME、AgentRM和AgentPRM的学习路线。卡片不是发表时间或严格算法依赖关系。</desc>
+  <defs>
+    <style>
+      text { font-family: "Microsoft YaHei", "Noto Sans CJK SC", "PingFang SC", sans-serif; fill: #172838; }
+      .title { font-size: 31px; font-weight: 700; }
+      .subtitle { font-size: 18px; fill: #536475; }
+      .phase { font-size: 23px; font-weight: 700; }
+      .name { font-size: 21px; font-weight: 700; }
+      .body { font-size: 18px; fill: #536475; }
+      .note { font-size: 17px; fill: #647383; }
+      .panel { fill: white; stroke: #dce4eb; stroke-width: 1.5; }
+      .card { fill: #f5f8fb; }
+      .arrow { fill: none; stroke: #6d8296; stroke-width: 2.6; marker-end: url(#arrowhead); }
+    </style>
+    <marker id="arrowhead" markerWidth="9" markerHeight="9" refX="7.5" refY="4.5" orient="auto"><path d="M0 0 L8 4.5 L0 9 Z" fill="#6d8296"/></marker>
+  </defs>
+  <rect width="960" height="1300" rx="18" fill="#eef3f7"/>
+  <text x="36" y="55" class="title">奖励模型与过程优化，究竟改了哪一环？</text>
+  <text x="36" y="91" class="subtitle">按问题组织的路线图 · 数据、目标、用法与验证需要分别判断</text>
+
+  <rect x="36" y="134" width="430" height="524" rx="16" class="panel"/>
+  <rect x="36" y="134" width="430" height="70" rx="16" fill="#e5effb"/>
+  <text x="57" y="179" class="phase">01  数据与监督</text>
+  <rect x="57" y="226" width="388" height="96" rx="10" class="card"/>
+  <text x="75" y="259" class="name">InstructGPT / BT</text>
+  <text x="75" y="291" class="body">人工偏好对 → 整篇奖励排序</text>
+  <rect x="57" y="340" width="388" height="96" rx="10" class="card"/>
+  <text x="75" y="373" class="name">PRM800K</text>
+  <text x="75" y="405" class="body">人工逐步判断 → 正、负、中性标签</text>
+  <rect x="57" y="454" width="388" height="96" rx="10" class="card"/>
+  <text x="75" y="487" class="name">Math-Shepherd</text>
+  <text x="75" y="519" class="body">前缀续写＋结果检查 → MC 标签</text>
+  <text x="57" y="593" class="note">先确认：标签表示什么、由谁提供？</text>
+  <text x="57" y="623" class="note">人工成本与采样成本需要一起计入。</text>
+
+  <rect x="494" y="134" width="430" height="524" rx="16" class="panel"/>
+  <rect x="494" y="134" width="430" height="70" rx="16" fill="#eee9fb"/>
+  <text x="515" y="179" class="phase">02  评分目标与参数化</text>
+  <rect x="515" y="224" width="388" height="73" rx="10" class="card"/>
+  <text x="533" y="253" class="name">HelpSteer2-Preference</text>
+  <text x="533" y="280" class="body">绝对评分、相对偏好与组合训练</text>
+  <rect x="515" y="308" width="388" height="73" rx="10" class="card"/>
+  <text x="533" y="337" class="name">ArmoRM</text>
+  <text x="533" y="364" class="body">多目标评分＋依赖 prompt 的门控</text>
+  <rect x="515" y="392" width="388" height="73" rx="10" class="card"/>
+  <text x="533" y="421" class="name">GRM</text>
+  <text x="533" y="448" class="body">偏好 loss＋文本生成正则</text>
+  <rect x="515" y="476" width="388" height="73" rx="10" class="card"/>
+  <text x="533" y="505" class="name">Rewarding Progress</text>
+  <text x="533" y="532" class="body">互补 prover 的进展：Aμ = Qμ − Vμ</text>
+  <rect x="515" y="560" width="388" height="73" rx="10" class="card"/>
+  <text x="533" y="589" class="name">隐式 PRM</text>
+  <text x="533" y="616" class="body">结果监督 → token log 概率比</text>
+
+  <rect x="494" y="706" width="430" height="524" rx="16" class="panel"/>
+  <rect x="494" y="706" width="430" height="70" rx="16" fill="#e0f1e9"/>
+  <text x="515" y="751" class="phase">03  分数怎样用于优化</text>
+  <rect x="515" y="796" width="388" height="73" rx="10" class="card"/>
+  <text x="533" y="825" class="name">PPO-RLHF</text>
+  <text x="533" y="852" class="body">reward → return → advantage → 更新</text>
+  <rect x="515" y="880" width="388" height="73" rx="10" class="card"/>
+  <text x="533" y="909" class="name">PURE</text>
+  <text x="533" y="936" class="body">min-form：改变信用分配</text>
+  <rect x="515" y="964" width="388" height="73" rx="10" class="card"/>
+  <text x="533" y="993" class="name">PRIME</text>
+  <text x="533" y="1020" class="body">在线更新隐式评分器，再优化策略</text>
+  <rect x="515" y="1048" width="388" height="73" rx="10" class="card"/>
+  <text x="533" y="1077" class="name">AgentRM</text>
+  <text x="533" y="1104" class="body">价值评分器指导推理时搜索</text>
+  <rect x="515" y="1132" width="388" height="73" rx="10" class="card"/>
+  <text x="533" y="1161" class="name">AgentPRM</text>
+  <text x="533" y="1188" class="body">交互 → Q 目标 → 评分器 → 策略迭代</text>
+
+  <rect x="36" y="706" width="430" height="524" rx="16" class="panel"/>
+  <rect x="36" y="706" width="430" height="70" rx="16" fill="#fbefd9"/>
+  <text x="57" y="751" class="phase">04  独立验证与适用边界</text>
+  <rect x="57" y="796" width="388" height="73" rx="10" class="card"/>
+  <text x="75" y="825" class="name">PRM Lessons</text>
+  <text x="75" y="852" class="body">候选答案成绩与步骤验证分开评</text>
+  <rect x="57" y="880" width="388" height="73" rx="10" class="card"/>
+  <text x="75" y="909" class="name">目标语义</text>
+  <text x="75" y="936" class="body">正确性、未来价值、进展不可混同</text>
+  <rect x="57" y="964" width="388" height="73" rx="10" class="card"/>
+  <text x="75" y="993" class="name">真实收益与泛化</text>
+  <text x="75" y="1020" class="body">独立任务、新策略输出与新环境</text>
+  <rect x="57" y="1048" width="388" height="73" rx="10" class="card"/>
+  <text x="75" y="1077" class="name">完整计算预算</text>
+  <text x="75" y="1104" class="body">标签、环境、训练与推理成本</text>
+  <rect x="57" y="1132" width="388" height="73" rx="10" class="card"/>
+  <text x="75" y="1161" class="name">更新边界</text>
+  <text x="75" y="1188" class="body">RM、Actor、Critic 的 loss 各更新谁</text>
+
+  <path d="M470 396 H488" class="arrow"/>
+  <path d="M709 664 V698" class="arrow"/>
+  <path d="M488 968 H472" class="arrow"/>
+  <text x="36" y="1270" class="note">卡片表示主要研究位置，不是发表顺序或严格依赖；同一方法可能同时影响多个环节。</text>
+</svg>
