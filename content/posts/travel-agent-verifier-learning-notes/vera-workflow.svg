@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 790" role="img" aria-labelledby="title desc">
+<title id="title">VERA 环境生成与交替更新流程</title>
+<desc id="desc">从旧任务和轨迹构建并验收训练环境。当前模型和 skills 在开发集上运行，归因报告分别指导 GRPO 模型训练和 skill 对照试跑。候选更新经开发集验收后进入下一轮。</desc>
+<defs>
+  <marker id="arrow" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="7" markerHeight="7" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" fill="#4c6073"/></marker>
+  <style>
+    text{font-family:"Microsoft YaHei","PingFang SC","Noto Sans CJK SC",sans-serif;fill:#172b3a}
+    .title{font-size:27px;font-weight:700}.head{font-size:19px;font-weight:700}.detail{font-size:16px}.tag{font-size:15px;fill:#3e586b}
+    .box{stroke-width:1.5}.env{fill:#e9f5ef;stroke:#8ebca7}.eval{fill:#eaf2fb;stroke:#a1bcdd}.update{fill:#f4eefb;stroke:#c3aedb}.reject{fill:#fff0e8;stroke:#ddb9a4}
+    .line{fill:none;stroke:#4c6073;stroke-width:1.9;stroke-linejoin:round;marker-end:url(#arrow)}
+  </style>
+</defs>
+<rect width="760" height="790" rx="20" fill="#f8fafc"/>
+<text class="title" x="30" y="49">VERA：从执行轨迹到下一轮改进</text>
+<path class="line" d="M205 168V194"/>
+<path class="line" d="M555 168V194"/>
+<path class="line" d="M205 268V300"/><path class="line" d="M45 231H24V400H45"/>
+<path class="line" d="M555 268V300"/>
+<path class="line" d="M205 370V430"/>
+
+<path class="line" d="M450 370V398H290V430"/>
+<path class="line" d="M595 370V430"/>
+<path class="line" d="M205 520V550"/>
+<path class="line" d="M555 520V550"/>
+<path class="line" d="M205 623V650H380V670"/>
+<path class="line" style="marker-end:none" d="M555 623V650H380"/>
+<path class="line" d="M705 704H731V130H715"/>
+<rect class="box env" x="45" y="91" width="320" height="77" rx="11"/>
+<text class="head" x="63" y="122">旧任务与执行轨迹</text>
+<text class="detail" x="63" y="148">保存阶段起点，生成评分清单</text>
+<rect class="box eval" x="395" y="91" width="320" height="77" rx="11"/>
+<text class="head" x="413" y="122">当前模型与 skills</text>
+<text class="detail" x="413" y="148">运行开发集，记录阶段得分和轨迹</text>
+<rect class="box env" x="45" y="194" width="320" height="74" rx="11"/>
+<text class="head" x="63" y="224">回放与证据检查</text>
+<text class="detail" x="63" y="249">确认起点能恢复、评分有依据</text>
+<rect class="box eval" x="395" y="194" width="320" height="74" rx="11"/>
+<text class="head" x="413" y="224">归因报告</text>
+<text class="detail" x="413" y="249">找出要训练的阶段与候选 skill 改动</text>
+<rect class="box env" x="45" y="300" width="310" height="70" rx="11"/>
+<text class="head" x="63" y="330">通过：进入训练环境库</text>
+<text class="detail" x="63" y="354">阶段沙箱、完整任务及评分规则</text>
+<rect class="box eval" x="395" y="300" width="320" height="70" rx="11"/>
+<text class="head" x="413" y="330">选择本轮更新的一侧</text>
+<text class="detail" x="413" y="354">模型轮与 harness 轮交替进行</text>
+<rect class="box reject" x="45" y="385" width="147" height="30" rx="8"/>
+<text class="tag" x="57" y="406">失败：修订或淘汰</text>
+<text class="tag" x="227" y="412">训练起点</text>
+<text class="tag" x="478" y="414">候选改动</text>
+<rect class="box update" x="45" y="430" width="320" height="90" rx="11"/>
+<text class="head" x="63" y="460">模型轮：固定 harness</text>
+<text class="detail" x="63" y="485">在训练环境中采样，核验奖励</text>
+<text class="detail" x="63" y="508">用 GRPO 更新权重</text>
+<rect class="box update" x="395" y="430" width="320" height="90" rx="11"/>
+<text class="head" x="413" y="460">Harness 轮：固定模型</text>
+<text class="detail" x="413" y="485">同一批任务对照试跑</text>
+<text class="detail" x="413" y="508">比较旧 skill 与候选 skill</text>
+<rect class="box eval" x="45" y="550" width="320" height="73" rx="11"/>
+<text class="head" x="63" y="580">验收候选模型</text>
+<text class="detail" x="63" y="604">开发集复测，决定保留或回退</text>
+<rect class="box eval" x="395" y="550" width="320" height="73" rx="11"/>
+<text class="head" x="413" y="580">验收候选 skill</text>
+<text class="detail" x="413" y="604">根据对照结果决定是否采用</text>
+<rect class="box eval" x="55" y="670" width="650" height="69" rx="11"/>
+<text class="head" x="380" y="701" text-anchor="middle">本轮保留的模型与 skills</text>
+<text class="detail" x="380" y="724" text-anchor="middle">带着这个组合重新跑开发集，进入下一轮</text>
+</svg>
