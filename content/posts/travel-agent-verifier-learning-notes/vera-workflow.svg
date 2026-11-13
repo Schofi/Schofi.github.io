@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 790" role="img" aria-labelledby="title desc">
+<svg xmlns="http://www.w3.org/2000/svg" width="760" height="790" viewBox="0 0 760 790" role="img" aria-labelledby="title desc">
 <title id="title">VERA 环境生成与交替更新流程</title>
 <desc id="desc">从旧任务和轨迹构建并验收训练环境。当前模型和 skills 在开发集上运行，归因报告分别指导 GRPO 模型训练和 skill 对照试跑。候选更新经开发集验收后进入下一轮。</desc>
 <defs>
